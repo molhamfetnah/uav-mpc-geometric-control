@@ -137,8 +137,9 @@ MIT License - See LICENSE file
 ## Author
 
 Mulham Fetna
+- University of Aleppo
+- Department of Mechatronics Engineering
 - Email: mulham.fetna@alepuniv.edu.sy
-- GitHub: github.com/molhamfetnah
 
 ---
 

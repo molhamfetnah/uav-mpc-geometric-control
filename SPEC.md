@@ -1,6 +1,6 @@
 # Distributed MPC for Multi-UAV Formation Control - Specification
 
-## Project: uav-mpc-geometric-control (FI-10)
+## Project: uav-mpc-geometric-control
 
 **Type:** Research Implementation  
 **Application:** Multi-UAV Formation Control  

@@ -22,15 +22,10 @@
 
 **Title**: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
 
-**Authors**:
-1. Mulham Fetna* (Primary Author)
-   - Department of Computer Science and Engineering
-   - University of Bologna, Italy
-   - Email: mulham.fetna@studio.unibo.it
-   
-2. Luca Ricci (Co-author)
-   - Department of Computer Science
-   - University of Tuscia, Italy
+**Author**: Mulham Fetna (sole author)
+- Department of Mechatronics Engineering
+- University of Aleppo, Syria
+- Email: mulham.fetna@alepuniv.edu.sy
 
 **Keywords**: 
 - Distributed MPC

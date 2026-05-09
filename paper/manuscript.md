@@ -1,11 +1,10 @@
 # Distributed Model Predictive Control for Multi-UAV Formation with Consensus
 
-**Mulham Fetna**¹, **Luca Ricci**²
+**Mulham Fetna**
 
-¹Department of Computer Science and Engineering, University of Bologna, Italy
-²Department of Computer Science, University of Tuscia, Italy
+Department of Mechatronics Engineering, University of Aleppo, Syria
 
-*Correspondence: mulham.fetna@studio.unibo.it*
+*Correspondence: mulham.fetna@alepuniv.edu.sy*
 
 ---
 
@@ -128,7 +127,7 @@ We presented a distributed MPC framework for multi-UAV formation control. The ap
 
 ## Acknowledgments
 
-This work was supported by the University of Bologna and University of Tuscia research programs.
+This work was supported by the University of Aleppo research programs.
 
 ---
 

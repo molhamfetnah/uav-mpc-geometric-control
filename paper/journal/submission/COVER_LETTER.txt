@@ -16,7 +16,7 @@ I am pleased to submit my manuscript for consideration for publication in IEEE T
 MANUSCRIPT DETAILS
 ------------------
 Title: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
-Authors: Mulham Fetna, Luca Ricci
+Authors: Mulham Fetna (sole author)
 Manuscript Type: Original Research Article
 
 ---
@@ -42,7 +42,7 @@ DECLARATIONS
 -----------
 - Funding: No funding received
 - Conflict of Interest: The author declares no conflict of interest
-- Data Availability: All data and code available at https://github.com/molhamfetnah/uav-mpc-geometric-control
+- Data Availability: All data and code available via repository link
 
 ---
 
@@ -51,8 +51,8 @@ I look forward to your positive response.
 Sincerely,
 
 Mulham Fetna
-Researcher, University of Bologna
-Department of Computer Science and Engineering
-Italy
+Researcher, University of Aleppo
+Department of Mechatronics Engineering
+Syria
 
-Email: mulham.fetna@studio.unibo.it
+Email: mulham.fetna@alepuniv.edu.sy
