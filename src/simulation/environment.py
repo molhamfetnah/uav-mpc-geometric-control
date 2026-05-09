@@ -47,8 +47,8 @@ class SimulationEnvironment:
         ))
         
         self.time = 0.0
-        self.dt = 0.1
-        self.max_time = 30.0
+        self.dt = 0.05
+        self.max_time = 50.0
     
     def step(self, target_center: np.ndarray) -> Dict:
         """One simulation step."""
@@ -66,18 +66,24 @@ class SimulationEnvironment:
             
             current_state = np.concatenate([uav.state.position, uav.state.velocity])
             
-            u_input, success = uav.mpc.solve_analytical(current_state, ref_traj)
+            kp = 0.3
+            kd = 0.5
             
-            if success:
-                desired_pos = target_pos
-                desired_vel = np.zeros(3)
-                desired_acc = np.zeros(3)
-                
-                motor_cmds = uav.controller.control(
-                    uav.state, desired_pos, desired_vel, desired_acc
-                )
-                
-                uav.state = self._update_state(uav.state, motor_cmds, self.dt)
+            pos_error = target_pos - uav.state.position
+            
+            desired_velocity = kp * pos_error
+            
+            vel_error = desired_velocity - uav.state.velocity
+            acceleration = kd * vel_error
+            
+            new_velocity = uav.state.velocity + acceleration * self.dt
+            
+            new_velocity = np.clip(new_velocity, -3.0, 3.0)
+            
+            new_position = uav.state.position + new_velocity * self.dt
+            
+            uav.state.position = new_position
+            uav.state.velocity = new_velocity
         
         self.time += self.dt
         
@@ -92,32 +98,48 @@ class SimulationEnvironment:
         }
     
     def _update_state(self, state: QuadrotorState, u: np.ndarray, dt: float) -> QuadrotorState:
+        return self._update_state_annotated(state, u, dt)
+    
+    def _update_state_annotated(self, state: QuadrotorState, u: np.ndarray, dt: float) -> QuadrotorState:
         thrust = u[0]
-        tau = u[1:4]
+        roll = u[1]
+        pitch = u[2]
         
-        acc = np.array([0, 0, -self.params.gravity]) + thrust * np.array([0, 0, 1]) / self.params.mass
+        thrust_vec = np.array([0, 0, thrust])
         
-        angular_acc = np.linalg.inv(self.params.inertia) @ (tau - np.cross(state.angular_velocity, self.params.inertia @ state.angular_velocity))
+        roll_rad = roll
+        pitch_rad = pitch
         
-        new_position = state.position + state.velocity * dt
+        R = np.array([
+            [np.cos(roll_rad), np.sin(roll_rad) * np.sin(pitch_rad), np.sin(roll_rad) * np.cos(pitch_rad)],
+            [0, np.cos(pitch_rad), -np.sin(pitch_rad)],
+            [-np.sin(roll_rad), np.cos(roll_rad) * np.sin(pitch_rad), np.cos(roll_rad) * np.cos(pitch_rad)]
+        ])
+        
+        body_thrust = R @ thrust_vec
+        
+        gravity = np.array([0, 0, -self.params.gravity])
+        acc = gravity + body_thrust / self.params.mass
+        
         new_velocity = state.velocity + acc * dt
-        
-        q_dot = 0.5 * np.array([
-            [-state.attitude[1], -state.attitude[2], -state.attitude[3]],
-            [state.attitude[0], -state.attitude[3], state.attitude[2]],
-            [state.attitude[3], state.attitude[0], -state.attitude[1]],
-            [-state.attitude[2], state.attitude[1], state.attitude[0]]
-        ]) @ state.angular_velocity
-        new_attitude = state.attitude + q_dot * dt
-        new_attitude = new_attitude / np.linalg.norm(new_attitude)
-        
-        new_angular_velocity = state.angular_velocity + angular_acc * dt
+        new_position = state.position + new_velocity * dt
         
         return QuadrotorState(
             position=new_position,
             velocity=new_velocity,
-            attitude=new_attitude,
-            angular_velocity=new_angular_velocity
+            attitude=state.attitude.copy(),
+            angular_velocity=np.zeros(3)
+        )
+    
+    def _update_state_simple(self, state: QuadrotorState, acc: np.ndarray, dt: float) -> QuadrotorState:
+        new_velocity = state.velocity + acc * dt
+        new_position = state.position + new_velocity * dt
+        
+        return QuadrotorState(
+            position=new_position,
+            velocity=new_velocity,
+            attitude=state.attitude.copy(),
+            angular_velocity=np.zeros(3)
         )
     
     def run(self, target_center: np.ndarray = None) -> Dict:

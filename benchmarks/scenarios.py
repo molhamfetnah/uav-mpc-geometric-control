@@ -77,21 +77,23 @@ def run_benchmark(scenario_id: str, verbose: bool = True) -> Dict:
             result = env.step(current_target)
             results.append(result)
         final_result = results[-1]
+        final_error = final_result.get('mean_error', float('inf'))
     else:
         result = env.run(target)
         results = [result]
+        final_error = result.get('final_error', float('inf'))
     
-    success = result.get('final_error', float('inf')) < 10.0
+    success = final_error < 5.0
     
     if verbose:
         status = 'PASS' if success else 'FAIL'
-        print(f"{scenario_id}: {config['name']} - {status} (error: {result.get('final_error', -1):.3f})")
+        print(f"{scenario_id}: {config['name']} - {status} (error: {final_error:.3f})")
     
     return {
         'scenario': scenario_id,
         'name': config['name'],
         'success': success,
-        'final_error': result.get('final_error', float('inf')),
+        'final_error': final_error,
         'expected_success': config.get('expected_success', True)
     }
 
