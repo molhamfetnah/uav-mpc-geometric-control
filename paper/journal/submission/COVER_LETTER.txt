@@ -1,0 +1,58 @@
+COVER LETTER - IEEE T-RO
+=========================
+
+To: Editor-in-Chief, IEEE Transactions on Robotics
+
+Date: May 9, 2026
+
+Subject: Submission of Manuscript - "Distributed Model Predictive Control for Multi-UAV Formation with Consensus"
+
+---
+
+Dear Editor,
+
+I am pleased to submit my manuscript for consideration for publication in IEEE Transactions on Robotics.
+
+MANUSCRIPT DETAILS
+------------------
+Title: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
+Authors: Mulham Fetna, Luca Ricci
+Manuscript Type: Original Research Article
+
+---
+
+I confirm that this work is original and has not been published elsewhere, nor is it under consideration for publication in any other journal.
+
+WHY THIS PAPER FITS IEEE T-RO
+-----------------------------
+This paper presents a distributed model predictive control framework for multi-UAV quadrotor formation. The work aligns with the journal's scope in:
+
+- Distributed control and coordination
+- Multi-robot systems
+- Model predictive control applications
+
+KEY CONTRIBUTIONS
+-----------------
+1. Novel distributed MPC architecture for multi-UAV formation
+2. Consensus protocol for decentralized coordination
+3. Comprehensive benchmark with 100% success rate (7/7 scenarios)
+4. Open-source implementation available on GitHub
+
+DECLARATIONS
+-----------
+- Funding: No funding received
+- Conflict of Interest: The author declares no conflict of interest
+- Data Availability: All data and code available at https://github.com/molhamfetnah/uav-mpc-geometric-control
+
+---
+
+I look forward to your positive response.
+
+Sincerely,
+
+Mulham Fetna
+Researcher, University of Bologna
+Department of Computer Science and Engineering
+Italy
+
+Email: mulham.fetna@studio.unibo.it

@@ -1,0 +1,16 @@
+Code Availability Statement
+
+The source code and data for this work is publicly available at:
+https://github.com/molhamfetnah/uav-mpc-geometric-control
+
+The repository includes:
+- Distributed MPC implementation (Python/NumPy)
+- Quadrotor dynamics model (6-DOF)
+- Geometric SO3 controller
+- Consensus protocol (ring/mesh topology)
+- Formation planner (grid, line, circle, wedge)
+- Simulation environment
+- Benchmark suite (7 scenarios, 100% pass rate)
+- All experimental results
+
+License: MIT License
