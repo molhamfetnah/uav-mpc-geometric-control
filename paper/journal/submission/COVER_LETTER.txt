@@ -1,9 +1,9 @@
-COVER LETTER - IEEE T-RO
-=========================
+COVER LETTER - Robotics and Autonomous Systems
+================================================
 
-To: Editor-in-Chief, IEEE Transactions on Robotics
+To: Editor-in-Chief, Robotics and Autonomous Systems
 
-Date: May 9, 2026
+Date: May 10, 2026
 
 Subject: Submission of Manuscript - "Distributed Model Predictive Control for Multi-UAV Formation with Consensus"
 
@@ -11,38 +11,38 @@ Subject: Submission of Manuscript - "Distributed Model Predictive Control for Mu
 
 Dear Editor,
 
-I am pleased to submit my manuscript for consideration for publication in IEEE Transactions on Robotics.
+I am pleased to submit my manuscript for consideration for publication in Robotics and Autonomous Systems.
 
 MANUSCRIPT DETAILS
 ------------------
 Title: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
-Authors: Mulham Fetna (sole author)
+Author: Mulham Fetna (sole author)
 Manuscript Type: Original Research Article
 
 ---
 
 I confirm that this work is original and has not been published elsewhere, nor is it under consideration for publication in any other journal.
 
-WHY THIS PAPER FITS IEEE T-RO
------------------------------
+WHY THIS PAPER FITS ROBOTICS AND AUTONOMOUS SYSTEMS
+---------------------------------------------------
 This paper presents a distributed model predictive control framework for multi-UAV quadrotor formation. The work aligns with the journal's scope in:
 
-- Distributed control and coordination
-- Multi-robot systems
-- Model predictive control applications
+- Multi-robot systems and distributed control
+- Autonomous navigation and formation control
+- Model predictive control applications in robotics
 
 KEY CONTRIBUTIONS
 -----------------
-1. Novel distributed MPC architecture for multi-UAV formation
-2. Consensus protocol for decentralized coordination
-3. Comprehensive benchmark with 100% success rate (7/7 scenarios)
+1. Novel distributed MPC architecture for multi-UAV formation without central coordinator
+2. Consensus protocol enabling decentralized coordination via ring/mesh communication
+3. Comprehensive evaluation: 100% success on 7 benchmarks, 95.2% on 21 stress tests
 4. Open-source implementation available on GitHub
 
 DECLARATIONS
 -----------
 - Funding: No funding received
 - Conflict of Interest: The author declares no conflict of interest
-- Data Availability: All data and code available via repository link
+- Data Availability: All code available at project repository
 
 ---
 

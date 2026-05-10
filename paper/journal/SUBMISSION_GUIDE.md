@@ -1,20 +1,20 @@
-# Journal Submission Guide - IEEE Transactions on Robotics (T-RO)
+# Journal Submission Guide - Robotics and Autonomous Systems (Elsevier)
 
-## Why T-RO?
+## Why Robotics and Autonomous Systems (RAS)?
 
 | Factor | Details |
 |--------|---------|
-| **Publisher** | IEEE |
-| **Impact Factor** | ~5.7 |
-| **Review Time** | 4-8 months |
-| **Fit** | Multi-UAV control, MPC, formation control |
+| **Publisher** | Elsevier |
+| **Impact Factor** | ~4.5 |
+| **Review Time** | 3-5 months (faster than IEEE) |
+| **Fit** | Perfect for distributed control, multi-robot, MPC |
 | **Accepts** | Simulation-only papers |
 
 ---
 
 ## Submission Link
 
-**Submit here:** https://ras.papercept.net/journals/tro
+**Submit here:** https://www.editorialmanager.com/ras/
 
 ---
 
@@ -36,174 +36,61 @@
 
 ---
 
-## Paper Format Requirements
+## Elsevier Submission Checklist
+
+| Item | Status |
+|------|--------|
+| ☐ Manuscript (Elsevier format) | 🔄 Convert from current |
+| ☐ Cover Letter | ✅ Ready |
+| ☐ Highlights (3-5 bullet points) | ✅ Ready |
+| ☐ Conflict of Interest Form | ✅ Ready |
+| ☐ Author Declaration | ✅ Ready |
+| ☐ Code Availability Statement | ✅ Ready |
+
+---
+
+## Paper Format Requirements (Elsevier)
 
 ### Structure
-1. **Title** - Concise, descriptive (under 15 words)
-2. **Abstract** - 150-200 words (INCLUDES: purpose, method, results, conclusions)
+1. **Title** - Concise, descriptive
+2. **Abstract** - 150-250 words (INCLUDES: purpose, method, results, conclusions)
 3. **Keywords** - 4-6 keywords
 4. **Introduction** - Problem, motivation, contributions
 5. **Related Work** - Distributed MPC, formation control
 6. **Methodology** - System architecture, controller, consensus
-7. **Experimental Results** - Benchmark scenarios
+7. **Experimental Results** - Benchmark scenarios, stress tests
 8. **Discussion** - Analysis, limitations
 9. **Conclusion** - Summary + future work
-10. **References** - IEEE style (12-15 references)
+10. **References** - Elsevier/APA style
 
-### Formatting
-- **Font:** Times New Roman, 10pt
-- **Spacing:** Single spacing
-- **Margins:** 1 inch all sides
+### Formatting (Elsevier standard)
+- **Font:** Times New Roman, 11pt
+- **Spacing:** Double spacing
+- **Margins:** 2.5 cm all sides
 - **Figures:** High resolution, numbered
-- **Page limit**: 8 pages (RA-L) or 12 pages (T-RO)
+- **Tables:** Numbered, with captions
+- **Page limit**: No strict limit, but typically 8-15 pages
 
 ---
 
-## Submission Checklist
+## Submission Steps
 
-| Item | Status |
-|------|--------|
-| ☐ Paper PDF (8-12 pages) | ✅ Ready in paper/manuscript.md |
-| ☐ Cover Letter | 🔄 Pending |
-| ☐ Keywords | ✅ Ready |
-| ☐ Author affiliations | ✅ Ready |
-| ☐ Conflict of Interest | 🔄 Pending |
-| ☐ Code availability statement | ✅ Ready |
-
----
-
-## Cover Letter Template
-
-```
-COVER LETTER - IEEE T-RO
-=========================
-
-To: Editor-in-Chief, IEEE Transactions on Robotics
-
-Date: May 9, 2026
-
-Subject: Submission of Manuscript - "Distributed Model Predictive Control for Multi-UAV Formation with Consensus"
+1. Go to https://www.editorialmanager.com/ras/
+2. Login or register (use same credentials as Applied Soft Computing)
+3. Submit new manuscript
+4. Fill in metadata
+5. Upload manuscript
+6. Add required attachments
+7. Submit
 
 ---
 
-Dear Editor,
+## Submission Complete
 
-I am pleased to submit my manuscript for consideration for publication in IEEE Transactions on Robotics.
+**Status**: Pending
 
-MANUSCRIPT DETAILS
-------------------
-Title: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
-Authors: Mulham Fetna, Luca Ricci
-Manuscript Type: Original Research Article
+### Tracking
+- Portal: https://www.editorialmanager.com/ras/
+- Expected review time: 3-5 months
 
----
-
-I confirm that this work is original and has not been published elsewhere, nor is it under consideration for publication in any other journal.
-
-WHY THIS PAPER FITS IEEE T-RO
------------------------------
-This paper presents a distributed model predictive control framework for multi-UAV quadrotor formation. The work aligns with the journal's scope in:
-
-- Distributed control and coordination
-- Multi-robot systems
-- Model predictive control applications
-
-KEY CONTRIBUTIONS
------------------
-1. Novel distributed MPC architecture for multi-UAV formation
-2. Consensus protocol for decentralized coordination
-3. Comprehensive benchmark with 100% success rate (7/7 scenarios)
-4. Open-source implementation available on GitHub
-
-DECLARATIONS
------------
-- Funding: No funding received
-- Conflict of Interest: The author declares no conflict of interest
-- Data Availability: All data and code available at https://github.com/molhamfetnah/uav-mpc-geometric-control
-
----
-
-I look forward to your positive response.
-
-Sincerely,
-
-Mulham Fetna
-Researcher, University of Bologna
-Department of Computer Science and Engineering
-Italy
-
-Email: mulham.fetna@studio.unibo.it
-```
-
----
-
-## Conflict of Interest Statement
-
-```
-The authors declare no conflict of interest.
-
-All authors confirm that this work is original and has not been submitted 
-to any other journal or conference simultaneously.
-
-This work was supported by the University of Bologna and University of 
-Tuscia research programs.
-```
-
----
-
-## Code Availability Statement
-
-```
-The source code and data for this work is publicly available at:
-https://github.com/molhamfetnah/uav-mpc-geometric-control
-
-The repository includes:
-- Distributed MPC implementation (Python/NumPy)
-- Quadrotor dynamics model (6-DOF)
-- Geometric SO3 controller
-- Consensus protocol (ring/mesh topology)
-- Formation planner (grid, line, circle, wedge)
-- Simulation environment
-- Benchmark suite (7 scenarios, 100% pass rate)
-- All experimental results
-
-License: MIT License
-```
-
----
-
-## Benchmark Results Summary
-
-| Scenario | Error (m) | Status |
-|----------|-----------|--------|
-| S1: Formation Hold | 0.092 | ✅ PASS |
-| S2: Translation | 0.100 | ✅ PASS |
-| S3: Rotation | 0.099 | ✅ PASS |
-| S4: Dynamic Tracking | 3.866 | ✅ PASS |
-| S5: Obstacle Avoidance | 0.092 | ✅ PASS |
-| S6: Communication Loss | 0.092 | ✅ PASS |
-| S7: Variable Swarm | 0.096 | ✅ PASS |
-
-**Overall: 7/7 (100.0%)**
-
----
-
-## Submission Timeline
-
-- [ ] Finalize paper manuscript (LaTeX/PDF)
-- [ ] Prepare cover letter
-- [ ] Login to ScholarOne: https://ras.papercept.net/journals/tro
-- [ ] Upload paper PDF
-- [ ] Fill in metadata (title, abstract, keywords)
-- [ ] Add authors and affiliations
-- [ ] Select technical area
-- [ ] Submit
-
----
-
-## Expected Outcome
-
-- **Review time**: 4-8 months
-- **Decision**: Accept/Revise/Reject
-
-*Last Updated: May 9, 2026*
+*Last Updated: May 10, 2026*

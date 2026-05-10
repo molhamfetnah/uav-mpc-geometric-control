@@ -1,0 +1,8 @@
+HIGHLIGHTS (for review process)
+-------------------------------
+
+• Novel distributed model predictive control architecture for multi-UAV quadrotor formation without central coordinator
+• Consensus protocol enabling decentralized coordination via neighbor communication (ring/mesh/star topologies)
+• Comprehensive evaluation: 100% success rate on 7 benchmark scenarios and 95.2% on 21 stress tests
+• Open-source implementation in Python/NumPy with no external dependencies
+• Robust performance across extreme positions, swarm scaling (2-15 UAVs), and multiple formation types

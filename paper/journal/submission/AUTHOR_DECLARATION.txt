@@ -1,0 +1,57 @@
+AUTHOR DECLARATION FORM
+=======================
+
+Manuscript Title: Distributed Model Predictive Control for Multi-UAV Formation with Consensus
+
+Author: Mulham Fetna
+
+---
+
+Please complete and sign this form and upload it with your submission.
+
+1. Originality
+---------------
+☐ The manuscript describes original work and is not under consideration for publication in any other journal or conference.
+
+2. Authorship
+-------------
+☐ The author has contributed significantly to the conception, design, execution, or interpretation of the reported work.
+☐ The author has approved the final version for publication.
+
+3. Funding
+----------
+☐ No funding was received for this work.
+
+OR
+
+☐ Funding information: [Specify]
+
+4. Conflict of Interest
+-----------------------
+☐ The author declares no conflict of interest.
+
+OR
+
+☐ Conflict of interest: [Specify]
+
+5. Data Availability
+--------------------
+☐ The code/data is available at: https://github.com/molhamfetnah/uav-mpc-geometric-control
+
+OR
+
+☐ Data available on request from the author.
+
+6. Ethical Approval
+-------------------
+☐ Not applicable (no human subjects or animal experiments)
+
+OR
+
+☐ Ethical approval obtained: [Specify]
+
+---
+
+Signed: _________________________
+
+Date: May 10, 2026
