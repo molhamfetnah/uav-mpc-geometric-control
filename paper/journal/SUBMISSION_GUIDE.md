@@ -5,8 +5,9 @@
 | Factor | Details |
 |--------|---------|
 | **Publisher** | Elsevier |
-| **Impact Factor** | ~4.5 |
-| **Review Time** | 3-5 months (faster than IEEE) |
+| **Impact Factor** | **5.2** |
+| **CiteScore** | 9.9 |
+| **Review Time** | ~32 days first decision, ~135 days to decision |
 | **Fit** | Perfect for distributed control, multi-robot, MPC |
 | **Accepts** | Simulation-only papers |
 
@@ -14,7 +15,7 @@
 
 ## Submission Link
 
-**Submit here:** https://www.editorialmanager.com/ras/
+**Submit here:** https://submit.elsevier.com/ROBOT
 
 ---
 
