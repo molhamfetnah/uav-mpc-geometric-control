@@ -123,10 +123,34 @@ This implementation supports a paper submission to IEEE Transactions on Robotics
 3. Geometric SO(3) attitude controller
 4. 100% success rate across 7 benchmark scenarios
 
+## Stress Tests
+
+Run comprehensive edge case tests:
+```bash
+python tests/stress/test_edge_cases.py
+```
+
+**Results: 95.2% pass (20/21 tests)**
+
+| Category | Tests | Pass |
+|----------|-------|------|
+| Extreme Positions | 5 | 100% |
+| Swarm Scaling (2-15 UAVs) | 3 | 100% |
+| Formation Types | 4 | 100% |
+| Initial States | 3 | 100% |
+| Consensus Protocols | 3 | 100% |
+| Combined Stress | 1 | 100% |
+| Dynamic Behavior | 2 | 50%* |
+
+*Note: Rapid trajectory change exceeds threshold - see STRESS_TEST_REPORT.md
+
+Full report: `tests/stress/STRESS_TEST_REPORT.md`
+
 ## Status
 
 - **Implementation**: ✅ Complete
-- **Benchmarks**: ✅ 100% pass (7/7)
+- **Benchmarks**: ✅ 100% (7/7)
+- **Stress Tests**: ✅ 95.2% (20/21)
 - **Paper**: 📝 Draft ready
 - **Submission**: ⏳ Pending (IEEE T-RO/RA-L)
 
